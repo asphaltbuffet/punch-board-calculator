@@ -1,27 +1,27 @@
 # Go Repository Template
 
 [![Keep a Changelog](https://img.shields.io/badge/changelog-Keep%20a%20Changelog-%23E05735)](CHANGELOG.md)
-[![GitHub Release](https://img.shields.io/github/v/release/asphaltbuffet/seed)](https://github.com/asphaltbuffet/seed/releases)
-[![Go Reference](https://pkg.go.dev/badge/github.com/asphaltbuffet/seed.svg)](https://pkg.go.dev/github.com/asphaltbuffet/seed)
-[![go.mod](https://img.shields.io/github/go-mod/go-version/asphaltbuffet/seed)](go.mod)
-[![LICENSE](https://img.shields.io/github/license/asphaltbuffet/seed)](LICENSE)
-[![Build Status](https://img.shields.io/github/workflow/status/asphaltbuffet/seed/build)](https://github.com/asphaltbuffet/seed/actions?query=workflow%3Abuild+branch%3Amain)
-[![Go Report Card](https://goreportcard.com/badge/github.com/asphaltbuffet/seed)](https://goreportcard.com/report/github.com/asphaltbuffet/seed)
-[![Codecov](https://codecov.io/gh/asphaltbuffet/seed/branch/main/graph/badge.svg)](https://codecov.io/gh/asphaltbuffet/seed)
+[![GitHub Release](https://img.shields.io/github/v/release/asphaltbuffet/punch-board-calculator)](https://github.com/asphaltbuffet/punch-board-calculator/releases)
+[![Go Reference](https://pkg.go.dev/badge/github.com/asphaltbuffet/punch-board-calculator.svg)](https://pkg.go.dev/github.com/asphaltbuffet/punch-board-calculator)
+[![go.mod](https://img.shields.io/github/go-mod/go-version/asphaltbuffet/punch-board-calculator)](go.mod)
+[![LICENSE](https://img.shields.io/github/license/asphaltbuffet/punch-board-calculator)](LICENSE)
+[![Build Status](https://img.shields.io/github/workflow/status/asphaltbuffet/punch-board-calculator/build)](https://github.com/asphaltbuffet/punch-board-calculator/actions?query=workflow%3Abuild+branch%3Amain)
+[![Go Report Card](https://goreportcard.com/badge/github.com/asphaltbuffet/punch-board-calculator)](https://goreportcard.com/report/github.com/asphaltbuffet/punch-board-calculator)
+[![Codecov](https://codecov.io/gh/asphaltbuffet/punch-board-calculator/branch/main/graph/badge.svg)](https://codecov.io/gh/asphaltbuffet/punch-board-calculator)
 
 This is a GitHub repository template for Go. It has been created for ease-of-use for anyone who wants to:
 
 - quickly get into Go without losing too much time on environment setup,
-- create a new repoisitory with basic Continous Integration.
+- create a new repository with basic Continous Integration.
 
 It includes:
 
-- continous integration via [GitHub Actions](https://github.com/features/actions),
+- continuous integration via [GitHub Actions](https://github.com/features/actions),
 - build automation via [Make](https://www.gnu.org/software/make),
 - dependency management using [Go Modules](https://github.com/golang/go/wiki/Modules),
 - code formatting using [gofumpt](https://github.com/mvdan/gofumpt),
 - linting with [golangci-lint](https://github.com/golangci/golangci-lint),
-- unit testing with [testify](https://github.com/stretchr/testify), [race detector](https://blog.golang.org/race-detector), code covarage [HTML report](https://blog.golang.org/cover) and [Codecov report](https://codecov.io/),
+- unit testing with [testify](https://github.com/stretchr/testify), [race detector](https://blog.golang.org/race-detector), code coverage [HTML report](https://blog.golang.org/cover), and [Codecov report](https://codecov.io/),
 - releasing using [GoReleaser](https://github.com/goreleaser/goreleaser),
 - dependencies scanning and updating thanks to [Dependabot](https://dependabot.com),
 - security code analysis using [CodeQL Action](https://docs.github.com/en/github/finding-security-vulnerabilities-and-errors-in-your-code/about-code-scanning),
@@ -33,10 +33,10 @@ It includes:
 
 ## Usage
 
-1. Sign up on [Codecov](https://codecov.io/) and configure [Codecov GitHub Application](https://github.com/apps/codecov) for all repositories.
+1. Sign up on [Codecov](https://codecov.io/) and configure the [Codecov GitHub Application](https://github.com/apps/codecov) for all repositories.
 1. Click the `Use this template` button (alt. clone or download this repository).
-1. Replace all occurences of `asphaltbuffet/seed` to `your_org/repo_name` in all files.
-1. Replace all occurences of `seed` to `repo_name` in [Dockerfile](Dockerfile).
+1. Replace all occurrences of `asphaltbuffet/seed` to `your_org/repo_name` in all files.
+1. Replace all occurrences of `seed` to `repo_name` in [Dockerfile](Dockerfile).
 1. Update the following files:
    - [CHANGELOG.md](CHANGELOG.md)
    - [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
@@ -46,7 +46,7 @@ It includes:
 ## Setup
 
 Below you can find sample instructions on how to set up the development environment.
-Of course you can use other tools like [GoLand](https://www.jetbrains.com/go/), [Vim](https://github.com/fatih/vim-go), [Emacs](https://github.com/dominikh/go-mode.el). However take notice that the Visual Studio Go extension is [officially supported](https://blog.golang.org/vscode-go) by the Go team.
+Of course, you can use other tools like [GoLand](https://www.jetbrains.com/go/), [Vim](https://github.com/fatih/vim-go), or [Emacs](https://github.com/dominikh/go-mode.el). However, take notice that the Visual Studio Go extension is [officially supported](https://blog.golang.org/vscode-go) by the Go team.
 
 ### Local Machine
 
@@ -68,7 +68,7 @@ Follow these steps if you do not want to install Go on your machine and you pref
 1. `F1` -> `Remote-Containers: Reopen in Container`.
 1. `F1` -> `Go: Install/Update Tools` -> (select all) -> OK.
 
-The Development Container configuration mixes [Docker in Docker](https://github.com/microsoft/vscode-dev-containers/tree/master/containers/docker-in-docker) and [Go](https://github.com/microsoft/vscode-dev-containers/tree/master/containers/go) definitions. Thanks to it you can use `go`, `docker`, `docker-compose` inside the container.
+The Development Container configuration mixes [Docker in Docker](https://github.com/microsoft/vscode-dev-containers/tree/master/containers/docker-in-docker) and [Go](https://github.com/microsoft/vscode-dev-containers/tree/master/containers/go) definitions. Thanks to it you can use `go`, `docker`, and `docker-compose` inside the container.
 
 ## Build
 
@@ -83,13 +83,13 @@ The Development Container configuration mixes [Docker in Docker](https://github.
 
 ## Release
 
-The release workflow is triggered each time a tag with `v` prefix is pushed.
+The release workflow is triggered each time a tag with the `v` prefix is pushed.
 
 _CAUTION_: Make sure to understand the consequences before you bump the major version. More info: [Go Wiki](https://github.com/golang/go/wiki/Modules#releasing-modules-v2-or-higher), [Go Blog](https://blog.golang.org/v2-go-modules).
 
 ## Maintainance
 
-Remember to update Go version in [.github/workflows](.github/workflows), [Makefile](Makefile) and [devcontainer.json](.devcontainer/devcontainer.json).
+Remember to update the Go version in [.github/workflows](.github/workflows), [Makefile](Makefile), and [devcontainer.json](.devcontainer/devcontainer.json).
 
 Notable files:
 
@@ -99,8 +99,8 @@ Notable files:
 - [.vscode](.vscode) - Visual Studio Code configuration files,
 - [.golangci.yml](.golangci.yml) - golangci-lint configuration,
 - [.goreleaser.yml](.goreleaser.yml) - GoReleaser configuration,
-- [Dockerfile](Dockerfile) - Dockerfile used by GoReleaser to create a container image,
-- [Makefile](Makefile) - Make targets used for development, [CI build](.github/workflows) and [.vscode/tasks.json](.vscode/tasks.json),
+- [Dockerfile](Dockerfile) - Dockerfile is used by GoReleaser to create a container image,
+- [Makefile](Makefile) - Make targets used for development, [CI build](.github/workflows), and [.vscode/tasks.json](.vscode/tasks.json),
 - [go.mod](go.mod) - [Go module definition](https://github.com/golang/go/wiki/Modules#gomod),
 - [tools.go](tools.go) - [build tools](https://github.com/golang/go/wiki/Modules#how-can-i-track-tool-dependencies-for-a-module).
 
@@ -108,7 +108,7 @@ Notable files:
 
 ### Why Visual Studio Code editor configuration
 
-Developers that use Visual Studio Code can take advantage of the editor configuration. While others do not have to care about it. Setting configs for each repo is unnecessary time consuming. VS Code is the most popular Go editor ([survey](https://blog.golang.org/survey2019-results)) and it is officially [supported by the Go team](https://blog.golang.org/vscode-go).
+Developers that use Visual Studio Code can take advantage of the editor configuration. While others do not have to care about it. Setting configs for each repo is unnecessarily time-consuming. VS Code is the most popular Go editor ([survey](https://blog.golang.org/survey2019-results)) and it is officially [supported by the Go team](https://blog.golang.org/vscode-go).
 
 You can always remove the [.devcontainer](.devcontainer) and [.vscode](.vscode) directories if it really does not help you.
 
@@ -143,9 +143,9 @@ Alternatively use [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com
     curl -sSfL https://raw.githubusercontent.com/your_org/repo_name/main/install.sh | sh -s -- -b /usr/local/bin
     ```
 
-### How can I customize the release or add deb/rpm/snap packages, Homebrew Tap, Scoop App Manifest etc
+### How can I customize the release or add deb/rpm/snap packages, Homebrew Tap, Scoop App Manifest, etc
 
-Take a look at GoReleaser [docs](https://goreleaser.com/customization/) as well as [its repo](https://github.com/goreleaser/goreleaser/) how it is dogfooding its functionality.
+Take a look at GoReleaser [docs](https://goreleaser.com/customization/) as well as [its repo](https://github.com/goreleaser/goreleaser/) for how it is dogfooding its functionality.
 
 ### How can I create a library instead of an application
 
@@ -159,13 +159,13 @@ release:
   prerelease: auto
 ```
 
-Alternatively, you can completly remove the usage of GoReleaser if you prefer handcrafted release notes. Take a look how it is done in [taskflow](https://github.com/pellared/taskflow).
+Alternatively, you can completely remove the usage of GoReleaser if you prefer handcrafted release notes. Take a look at how it is done in [taskflow](https://github.com/pellared/taskflow).
 
 ### Why the code coverage results are not accurate
 
 By default `go test` records code coverage for the package that is currently tested. If you want to get more accurate (cross-package) coverage, then consider using [go-acc](https://github.com/ory/go-acc). [Read more](https://www.ory.sh/golang-go-code-coverage-accurate/).
 
-### How to automate generating git tags for next release version
+### How to automate generating git tags for the next release version
 
 Auto-tagging can be done in many ways e.g. by using GitHub Actions like:
 
@@ -174,7 +174,7 @@ Auto-tagging can be done in many ways e.g. by using GitHub Actions like:
 - [Increment Semantic Version](https://github.com/marketplace/actions/increment-semantic-version),
 - [Github Tag](https://github.com/marketplace/actions/github-tag).
 
-However, creating a release tag manually is often the optimal approach. Take notice that this template executes a release workflow each time a git tag with `v` prefix is pushed.
+However, creating a release tag manually is often the optimal approach. Take notice that this template executes a release workflow each time a git tag with the `v` prefix is pushed.
 
 ## Contributing
 

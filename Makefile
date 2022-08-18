@@ -2,22 +2,22 @@
 
 .PHONY: dev
 dev: ## dev build
-dev: clean install generate vet fmt lint test mod-tidy
+dev: clean generate vet fmt lint test mod-tidy
 
 .PHONY: ci
 ci: ## CI build
-ci: dev diff
+ci: clean vet fmt test mod-tidy diff
 
 .PHONY: clean
 clean: ## remove files created during build pipeline
 	$(call print-target)
-	rm -rf dist
-	rm -f coverage.*
+	rm -rf dist || true
+	rm -rf bin || true
 
 .PHONY: install
 install: ## go install tools
 	$(call print-target)
-	cd tools && go install $(shell cd tools && go list -f '{{ join .Imports " " }}' -tags=tools)
+	curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.46.2
 
 .PHONY: generate
 generate: ## go generate
@@ -40,16 +40,16 @@ lint: ## golangci-lint
 	golangci-lint run
 
 .PHONY: test
-test: ## go test with race detector and code covarage
+test: ## go test with race detector and code coverage
 	$(call print-target)
-	go test -race -covermode=atomic -coverprofile=coverage.out ./...
-	go tool cover -html=coverage.out -o coverage.html
+	mkdir -p bin
+	go test -race -covermode=atomic -coverprofile=bin/coverage.out `go list ./... | grep -v mocks`
+	go tool cover -html=bin/coverage.out -o bin/coverage.html
 
 .PHONY: mod-tidy
 mod-tidy: ## go mod tidy
 	$(call print-target)
 	go mod tidy
-	cd tools && go mod tidy
 
 .PHONY: diff
 diff: ## git diff
@@ -67,7 +67,7 @@ build: install
 release: ## goreleaser --rm-dist
 release: install
 	$(call print-target)
-	goreleaser --rm-dist
+	curl -sfL https://goreleaser.com/static/run | bash --snapshot --skip-publish --rm-dist
 
 .PHONY: run
 run: ## go run

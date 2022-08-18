@@ -1,3 +1,3 @@
 FROM scratch
-COPY seed /
-ENTRYPOINT ["/seed"]
+COPY punch-board-calculator /
+ENTRYPOINT ["/punch-board-calculator"]
