@@ -1,12 +1,10 @@
 // Application which greets you.
 package main
 
-import "fmt"
+import (
+	"github.com/asphaltbuffet/punch-board-calculator/cmd"
+)
 
 func main() {
-	fmt.Println(greet())
-}
-
-func greet() string {
-	return "Hi!"
+	cmd.Execute()
 }
